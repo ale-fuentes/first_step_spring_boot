@@ -10,7 +10,9 @@ public class HomeController {
 	
 	@GetMapping
 	public String home() {
+		System.out.println(">>>>> work in HomeController");
 		return "Home";
+		
 	}
 
 	
