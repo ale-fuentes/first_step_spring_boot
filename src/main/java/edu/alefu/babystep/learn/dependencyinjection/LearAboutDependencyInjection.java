@@ -1,4 +1,4 @@
-package edu.alefu.babystep.learn;
+package edu.alefu.babystep.learn.dependencyinjection;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;

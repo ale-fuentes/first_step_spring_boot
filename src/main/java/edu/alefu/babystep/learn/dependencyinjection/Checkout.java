@@ -1,4 +1,4 @@
-package edu.alefu.babystep.learn;
+package edu.alefu.babystep.learn.dependencyinjection;
 
 public class Checkout {
 
