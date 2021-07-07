@@ -1,22 +1,25 @@
 package edu.alefu.babystep.learn.dependencyinjection;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")
 public class Checkout {
 
+	private int quantityfinished;
+	
 	@Autowired
-	@Qualifier("printerHP")
 	private Printer printer;
-	
-//	public Checkout(Printer printer) {
-//		this.printer = printer;
-//	}
-	
+
 	public void finish() {
-		printer.printing("buy0001.csv");
+		this.printer.printing("buy0001.csv");
+		this.quantityfinished++;
+	}
+	
+	public int getQuantityFinished() {
+		return this.quantityfinished;
 	}
 	
 }

@@ -15,6 +15,14 @@ public class LearAboutDependencyInjection {
 		Checkout checkout = ctx.getBean(Checkout.class);
 		checkout.finish();
 	
+		checkout = ctx.getBean(Checkout.class);
+		checkout.finish();
+
+		checkout = ctx.getBean(Checkout.class);
+		checkout.finish();
+		
+		System.out.println(checkout.getQuantityFinished());
+
 		((ConfigurableApplicationContext) ctx).close();
 	}
 }
